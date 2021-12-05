@@ -1,6 +1,7 @@
 package com.up42.codingtask.controller;
 
 import com.up42.codingtask.dto.FeatureResponseDto;
+import com.up42.codingtask.exception.EntityNotFoundException;
 import com.up42.codingtask.service.FeatureService;
 import java.io.IOException;
 import java.io.InputStream;
@@ -42,20 +43,16 @@ public class FeatureController
 
 
     @GetMapping("/{id}")
-    public FeatureResponseDto findFeature(@PathVariable String id)
+    public FeatureResponseDto findFeature(@PathVariable String id) throws EntityNotFoundException
     {
         return featureService.findFeatureById(id);
     }
 
 
-    @GetMapping(
-        value = "/{id}/quicklook",
-        produces = MediaType.IMAGE_PNG_VALUE
-    )
-    public @ResponseBody
-    byte[] getFeatureQuicklook(@PathVariable String id)
+    @GetMapping(value = "/{id}/quicklook", produces = MediaType.IMAGE_PNG_VALUE)
+    public @ResponseBody byte[] getFeatureQuicklook(@PathVariable String id) throws EntityNotFoundException
     {
-        return Base64.getDecoder().decode(featureService.findFeatureById(id).getQuickLook());
+        return featureService.getFeatureQuicklook(id);
     }
 
 }

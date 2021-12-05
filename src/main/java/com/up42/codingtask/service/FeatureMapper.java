@@ -9,7 +9,8 @@ import java.util.stream.Collectors;
 
 public class FeatureMapper
 {
-    public static FeatureResponseDto makeFeatureToResponse(FeatureDto featureDto){
+    public static FeatureResponseDto makeFeatureToResponse(FeatureDto featureDto)
+    {
         FeatureResponseDto.FeatureResponseDtoBuilder featureResponseDTOBuilder = FeatureResponseDto.builder();
         return featureResponseDTOBuilder
             .id(featureDto.getProperties().getId())
@@ -21,17 +22,21 @@ public class FeatureMapper
             .build();
     }
 
-    public static List<FeatureResponseDto> getFeatureResponseList(List<FeatureCollectionDto> featureCollectionDtos){
+
+    public static List<FeatureResponseDto> getFeatureResponseList(List<FeatureCollectionDto> featureCollectionDtos)
+    {
         return featureCollectionDtos
             .stream()
             .map(featureCollectionDto -> makeFeatureToResponse(featureCollectionDto.getFeatures().get(0)))
             .collect(Collectors.toList());
     }
 
-    public static Map<String, FeatureCollectionDto> getFeatureDataMap(List<FeatureCollectionDto> featureCollectionDtos){
+
+    public static Map<String, FeatureCollectionDto> getFeatureDataMap(List<FeatureCollectionDto> featureCollectionDtos)
+    {
         return featureCollectionDtos.stream().collect(Collectors.toMap(
             featureCollectionDto -> featureCollectionDto.getFeatures().get(0).getProperties().getId(),
             featureCollectionDto -> featureCollectionDto
-            ));
+        ));
     }
 }
