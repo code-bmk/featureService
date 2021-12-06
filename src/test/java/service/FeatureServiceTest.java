@@ -1,10 +1,10 @@
 package service;
 
 import com.up42.codingtask.client.FeatureClient;
-import com.up42.codingtask.dto.FeatureAcquisitionDto;
-import com.up42.codingtask.dto.FeatureCollectionDto;
-import com.up42.codingtask.dto.FeatureDto;
-import com.up42.codingtask.dto.FeaturePropertiesDto;
+import com.up42.codingtask.dto.client.FeatureAcquisitionDto;
+import com.up42.codingtask.dto.client.FeatureCollectionDto;
+import com.up42.codingtask.dto.client.FeatureDto;
+import com.up42.codingtask.dto.client.FeaturePropertiesDto;
 import com.up42.codingtask.dto.FeatureResponseDto;
 import com.up42.codingtask.exception.DataReadingException;
 import com.up42.codingtask.exception.EntityNotFoundException;

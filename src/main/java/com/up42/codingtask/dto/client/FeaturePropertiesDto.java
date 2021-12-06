@@ -1,4 +1,4 @@
-package com.up42.codingtask.dto;
+package com.up42.codingtask.dto.client;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;

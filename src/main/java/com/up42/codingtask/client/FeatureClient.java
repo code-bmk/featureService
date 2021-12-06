@@ -2,7 +2,7 @@ package com.up42.codingtask.client;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.up42.codingtask.dto.FeatureCollectionDto;
+import com.up42.codingtask.dto.client.FeatureCollectionDto;
 import com.up42.codingtask.exception.DataReadingException;
 import java.io.IOException;
 import java.util.List;

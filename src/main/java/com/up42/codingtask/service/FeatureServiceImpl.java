@@ -1,7 +1,7 @@
 package com.up42.codingtask.service;
 
 import com.up42.codingtask.client.FeatureClient;
-import com.up42.codingtask.dto.FeatureCollectionDto;
+import com.up42.codingtask.dto.client.FeatureCollectionDto;
 import com.up42.codingtask.dto.FeatureResponseDto;
 import com.up42.codingtask.exception.DataReadingException;
 import com.up42.codingtask.exception.EntityNotFoundException;

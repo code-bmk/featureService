@@ -1,7 +1,7 @@
 package com.up42.codingtask.service;
 
-import com.up42.codingtask.dto.FeatureDto;
-import com.up42.codingtask.dto.FeatureCollectionDto;
+import com.up42.codingtask.dto.client.FeatureDto;
+import com.up42.codingtask.dto.client.FeatureCollectionDto;
 import com.up42.codingtask.dto.FeatureResponseDto;
 import java.util.List;
 import java.util.Map;
